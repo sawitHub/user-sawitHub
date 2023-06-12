@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2023 at 11:19 AM
+-- Generation Time: Jun 12, 2023 at 07:16 PM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sawit-hub`
+-- Database: `sawithub`
 --
 
 -- --------------------------------------------------------
@@ -29,20 +29,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `unique_id` varchar(20) NOT NULL,
+  `user_id` varchar(10) NOT NULL,
+  `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `salt` varchar(16) NOT NULL,
-  `name` varchar(100) NOT NULL
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `unique_id`, `email`, `password`, `salt`, `name`) VALUES
-(1, 'abc', 'wahyu@gmail.com', '12345678', '', 'Wahyu'),
-(2, 'abcd', 'wahyuyu@gmail.com', '123456', 'e7809a4f1fbbb2c7', 'Wahyuyu');
+INSERT INTO `user` (`id`, `user_id`, `name`, `email`, `password`) VALUES
+(1, 'b38826e9-b', 'Admin', 'admin@gmail.com', 'admin123');
 
 --
 -- Indexes for dumped tables
@@ -53,7 +51,7 @@ INSERT INTO `user` (`id`, `unique_id`, `email`, `password`, `salt`, `name`) VALU
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `unique_id` (`unique_id`);
+  ADD UNIQUE KEY `user_id` (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -63,7 +61,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
