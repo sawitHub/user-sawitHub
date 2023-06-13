@@ -6,10 +6,19 @@ const uuid = require('uuid');
 
 //Connect database user-sawit-hub
 const connnection = mysql.createConnection({
+  //host cloud SQL
+  // host: '34.101.47.232',
+  //host lokal
+  host: 'localhost',
+
   user:'root',
+
+  // password cloud sql: 'password_sql_Anda'
+  // password:'sawithubdatabase',
+  // password lokal
   password:'',
+
   database:'sawithub',
-  socketPath: '/cloudsql/sawit-hub:asia-southeast2:sawit-hub-database'
 });
 
 const multer = Multer({
@@ -54,10 +63,10 @@ router.post('/login', multer.single('attachment'), (req, res)=>{
       if(password == user_password){
         res.send({message: "Login berhasil"});
       } else{
-        res.json(`Password salah`);
+        res.send({message: `Password salah`});
       }
     } else{
-      res.send({message: "user tidak ditemukan"})
+      res.send({message: "User tidak ditemukan, silahkan register terlebih dahulu"})
     }
 
   })
