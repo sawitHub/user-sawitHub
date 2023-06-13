@@ -1,7 +1,7 @@
 # user-sawitHub
 API for Login &amp; Register user sawitHub with MySQL Database
 
-# REGISTER
+## REGISTER
 - URL
   - /register
 - Method
@@ -12,7 +12,7 @@ API for Login &amp; Register user sawitHub with MySQL Database
   - Password
 - Response
   - "Register Success"
-# LOGIN
+## LOGIN
 - URL
   - /login
 - Method
