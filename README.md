@@ -7,7 +7,7 @@ API for Login &amp; Register user sawitHub with MySQL Database
 - Method
   - POST
 - Request Body
-  - <span style="color: green">Name</span>
+  - <font style="color: green">Name</font>
   - <span style="color: green">Email</span>
   - <span style="color: green">Password</span>
 - Response
