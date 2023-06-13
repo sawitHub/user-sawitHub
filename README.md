@@ -16,7 +16,7 @@ API for Login &amp; Register user sawitHub with MySQL Database
   "message": "Register success"
 
   ```
-  - "Register Success"
+  
 ## LOGIN
 - URL
   - /login
@@ -26,20 +26,20 @@ API for Login &amp; Register user sawitHub with MySQL Database
   - Email
   - Password
 - Response
-  - Jika email user tidak ditemukan output "User tidak ditemukan, silahkan register terlebih dahulu"
+  - Jika email user tidak ditemukan menghasilkan output
     ```json
 
     "User tidak ditemukan, silahkan register terlebih dahulu"
 
     ```
   - Jika email user ditemukan
-    - Jika password salah, output "Password salah"
+    - Jika password salah menghasilkan output
       ```json
 
       "message": "Password salah"
 
       ```
-    - Jika password benar, output "Login berhasil"
+    - Jika password benar menghasilkan output
       ```json
 
       "message": "Login berhasil"
